@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_send"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listview"
+            android:background="@color/room_item_background">
+
+            <Switch
+                android:id="@+id/switch_msg_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/em_margin_15"
+                android:layout_marginStart="@dimen/em_margin_15"
+                android:layout_marginRight="@dimen/em_margin_5"
+                android:layout_marginEnd="@dimen/em_margin_5"
+                android:thumb="@drawable/em_switch_thumb_selector"
+                android:track="@drawable/em_switch_track_selector"
+                android:textOff="@string/em_live_msg_normal"
+                android:textOn="@string/em_live_msg_barrage"
+                android:showText="true"
+                android:switchTextAppearance="@style/SwitchTheme"/>
+
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/em_live_input_hint"
+                android:layout_weight="1"
+                android:maxLines="3"
+                android:minHeight="36dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:textSize="18sp"
+                android:textColor="@color/common_black"
+                android:background="@drawable/em_live_input_et_bg_shape"/>
+
+            <ImageView
+                android:id="@+id/btn_send"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:text="发送"
+                android:layout_weight="0"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="4dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:src="@mipmap/em_live_send_icon"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

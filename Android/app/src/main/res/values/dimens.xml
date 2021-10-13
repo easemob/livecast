@@ -1,0 +1,26 @@
+<resources>
+    <dimen name="main_title_size">18sp</dimen>
+    <dimen name="main_list_item_name_size">14sp</dimen>
+    <dimen name="em_size_normal">14sp</dimen>
+    <dimen name="main_list_item_user_name_size">12sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="create_room_des_size">14sp</dimen>
+    <dimen name="em_size_big">16sp</dimen>
+
+
+    <dimen name="item_channel_spacing">4dp</dimen>
+    <dimen name="main_list_item_header">36dp</dimen>
+    <dimen name="main_header">36dp</dimen>
+
+    <dimen name="em_margin_2">2dp</dimen>
+    <dimen name="em_margin_3">3dp</dimen>
+    <dimen name="em_margin_5">5dp</dimen>
+    <dimen name="em_margin_8">8dp</dimen>
+    <dimen name="em_margin_10">10dp</dimen>
+    <dimen name="em_margin_12">12dp</dimen>
+    <dimen name="em_margin_15">15dp</dimen>
+    <dimen name="em_margin_20">20dp</dimen>
+    <dimen name="em_margin_25">25dp</dimen>
+    <dimen name="em_margin_30">30dp</dimen>
+    <dimen name="em_margin_40">40dp</dimen>
+</resources>

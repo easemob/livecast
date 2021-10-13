@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/room_item_background"
+   >
+<!--    android:background="@color/room_item_background"-->
+    <ImageView
+        android:id="@+id/ivMin"
+        android:layout_width="@dimen/main_header"
+        android:layout_height="@dimen/main_header"
+        android:layout_marginStart="@dimen/em_margin_20"
+        android:layout_marginTop="@dimen/em_margin_10"
+        android:padding="@dimen/em_margin_8"
+        android:src="@mipmap/small_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="@dimen/main_header"
+        android:layout_height="@dimen/main_header"
+        android:layout_marginEnd="@dimen/em_margin_20"
+        android:padding="@dimen/em_margin_8"
+        android:src="@mipmap/more_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivMin" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="房间"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/em_size_big"
+        app:layout_constraintBottom_toBottomOf="@id/ivMin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivMin" />
+
+    <ImageView
+        android:id="@+id/ivExit"
+        android:layout_width="@dimen/main_header"
+        android:layout_height="@dimen/main_header"
+        android:layout_marginTop="@dimen/em_margin_10"
+        android:background="@drawable/selector_room_lightly_exit_background"
+        android:padding="@dimen/em_margin_5"
+        android:src="@mipmap/icon_power"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/ivMore"
+        app:layout_constraintTop_toBottomOf="@id/ivMore" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpeakers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMin"
+        tools:listitem="@layout/item_room_seat_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

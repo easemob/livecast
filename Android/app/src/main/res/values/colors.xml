@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="room_item_background">#151718</color>
+<!--    <color name="room_item_background">#232d3b</color>-->
+    <color name="grey_color">#C3C3C3</color>
+    <color name="grey_press_color">#E8E8E8</color>
+
+    <color name="common_white">#fff</color>
+    <color name="common_black">#3B3B3B</color>
+
+    <color name="chat_color">#ffC99852</color>
+
+    <color name="white">#feffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#ffe9e9e9</color>
+
+    <color name="color_room_my_msg">#2071EC</color>
+    <color name="color_room_manager_orange">#E4AF2A</color>
+
+    <color name="em_switch_color_checked">#ff04aef0</color>
+    <color name="em_switch_color_unchecked">#ffe9e9e9</color>
+</resources>
