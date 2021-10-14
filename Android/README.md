@@ -7,6 +7,14 @@
 #### 获取示例项目
 前往 GitHub 下载或克隆 [Livecast](https://github.com/AgoraIO-Usecase/Livecast) 示例项目。
 
+#### 注册环信
+
+前往[环信官网](https://console.easemob.com/user/register)注册项目，生成appKey
+替换工程app中AndroidManifest中EASEMOB_APPKEY的value值
+
+替换：环信CLIENT_ID和CLIENT_SECRET
+将/app/src/main/java/io/agora/interactivepodcast/utils/Utils.java 文件中 第35和36行CLIENT_ID和CLIENT_SECRET的值换成自己的
+
 #### 注册Agora
 前往 [Agora官网](https://console.agora.io/) 注册项目，生产appId，然后替换工程**data**中 **strings_config.xml** 中 **app_id**，如果启用了token模式，需要替换 **token**。
 
@@ -43,6 +51,5 @@ python3 ./LeanCloudHelp.py
 4. 点击 Run app 按钮。运行一段时间后，应用就安装到 Android 设备上了。
 5. 打开应用，即可使用。
 
-![房间列表](./pic/1.png)
-![房间](./pic/2.png)
-![最小化](./pic/3.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/bab71b119cfd41c489d9f093d5bef648.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA546v5L-h5Y2z5pe26YCa6K6v5LqR,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/9992654ce03d4d96968c9ab9003a4982.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA546v5L-h5Y2z5pe26YCa6K6v5LqR,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
