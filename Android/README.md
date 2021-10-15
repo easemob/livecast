@@ -1,4 +1,5 @@
-# 前提条件
+前提条件
+
 开始前，请确保你的开发环境满足如下条件：
 - Android Studio 4.0.0 或以上版本。
 - Android 4.1 或以上版本的设备。部分模拟机可能无法支持本项目的全部功能，所以推荐使用真机。
@@ -46,10 +47,14 @@ python3 ./LeanCloudHelp.py
 
 #### 运行示例项目
 1. 开启 Android 设备的开发者选项，通过 USB 连接线将 Android 设备接入电脑。
+
 2. 在 Android Studio 中，点击 Sync Project with Gradle Files 按钮，同步项目。
+
 3. 在 Android Studio 左下角侧边栏中，点击 Build Variants 选择对应的平台。
+
 4. 点击 Run app 按钮。运行一段时间后，应用就安装到 Android 设备上了。
+
 5. 打开应用，即可使用。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bab71b119cfd41c489d9f093d5bef648.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA546v5L-h5Y2z5pe26YCa6K6v5LqR,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9992654ce03d4d96968c9ab9003a4982.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA546v5L-h5Y2z5pe26YCa6K6v5LqR,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+   ![房间描述](https://img-blog.csdnimg.cn/25a4018839d248dca412b5b41ee9e9ee.png#pic_center)
+   ![语聊房](https://img-blog.csdnimg.cn/f00f569bc78d4eaab0c6a4a701396288.png#pic_center)
