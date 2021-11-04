@@ -14,5 +14,8 @@
 - 主播/房间管理员：创建房间、邀请上麦、麦位管理、设置静音/取消静音；
 - 听众端：加入房间、举手上麦、房间切换；
 
+## Demo体验
+[互动播客Demo体验](https://www.easemob.com/download/demo)
+
  ![房间描述](https://img-blog.csdnimg.cn/25a4018839d248dca412b5b41ee9e9ee.png#pic_center)
    ![语聊房](https://img-blog.csdnimg.cn/f00f569bc78d4eaab0c6a4a701396288.png#pic_center)
