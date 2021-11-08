@@ -21,10 +21,10 @@
    ![语聊房](https://img-blog.csdnimg.cn/f00f569bc78d4eaab0c6a4a701396288.png#pic_center)
 
 ## 联系我们
-如果你遇到了困难，可以先参阅 [常见问题](https://docs-im.easemob.com/)
-如果你想了解更多官方示例，可以参考 [官方SDK示例](https://www.easemob.com/download/im)
-如果你想了解环信SDK在多个场景下的应用，可以参考 [官方场景案例](https://www.easemob.com/download/demo)
-如果你想了解环信的一些社区开发者维护的项目，可以查看 [社区开源项目](https://www.imgeek.org/code/)
-完整的 API 文档见 [文档中心](https://docs-im.easemob.com/)
-若遇到问题需要开发者帮助，你可以到 [开发者社区](https://www.imgeek.org/) 提问
-如果发现了示例代码的 bug，欢迎提交 [issue](https://github.com/easemob/livecast/issues)
+- 如果你遇到了困难，可以先参阅 [常见问题](https://docs-im.easemob.com/)
+- 如果你想了解更多官方示例，可以参考 [官方SDK示例](https://www.easemob.com/download/im)
+- 如果你想了解环信SDK在多个场景下的应用，可以参考 [官方场景案例](https://www.easemob.com/download/demo)
+- 如果你想了解环信的一些社区开发者维护的项目，可以查看 [社区开源项目](https://www.imgeek.org/code/)
+- 完整的 API 文档见 [文档中心](https://docs-im.easemob.com/)
+- 若遇到问题需要开发者帮助，你可以到 [开发者社区](https://www.imgeek.org/) 提问
+- 如果发现了示例代码的 bug，欢迎提交 [issue](https://github.com/easemob/livecast/issues)
