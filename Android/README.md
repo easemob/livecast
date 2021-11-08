@@ -6,7 +6,7 @@
 
 # 操作步骤
 #### 获取示例项目
-前往 GitHub 下载或克隆 [Livecast](https://github.com/AgoraIO-Usecase/Livecast) 示例项目。
+前往 GitHub 下载或克隆 [Livecast](https://github.com/easemob/livecast) 示例项目。
 
 #### 注册环信
 
