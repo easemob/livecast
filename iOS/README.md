@@ -49,9 +49,10 @@ python3 ./LeanCloudHelp.py
 1. 在iOS项目路径下，使用 "pod install" 命令去链接所有需要依赖的库。
 2. 最后使用 Xcode 打开 InteractivePodcast.xcworkspace，连接 iPhone／iPad 测试设备，设置有效的开发者签名后即可运行。
 
-#### 截图
-![截图1](./screenshots/1.png)
-![截图2](./screenshots/2.png)
+#### 项目截图
+![房间列表](https://img-blog.csdnimg.cn/748051bb9fcd483d87638afb4ed05b51.png#pic_center)
+
+![房间详情](https://img-blog.csdnimg.cn/ca89686401c940418c20470f085155b5.png#pic_center)
 
 ## 联系我们
 
