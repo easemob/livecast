@@ -5,24 +5,24 @@
 - iOS 11.0 或以上版本的设备。部分模拟机可能无法支持本项目的全部功能，所以推荐使用真机。
 
 # 操作步骤
-#### 获取示例项目
+### 获取示例项目
 前往 GitHub 下载或克隆 [InteractivePodcast](https://github.com/easemob/livecast/iOS) 示例项目。
 
-#### 注册环信
+### 注册环信
 
 前往[环信官网](https://console.easemob.com/user/register)注册项目，生成appKey
 替换工程 AppDelegate 文件中的 appkey
 
-#### 注册Agora
+### 注册Agora
 
 前往 [Agora官网](https://console.agora.io/) 注册项目，生产appId，然后替换 **Config.swift** 中 **AppId**。
 
-#### Targets
+### Targets
 
 - InteractivePodcast_LeanCloud, 数据源基于 Leancloud, 实现参考 [LeanCloud.swift](https://github.com/easemob/livecast/iOS/InteractivePodcast/Server/LeanCloud.swift)
 - InteractivePodcast_Firebase, 数据源基于 Firebase, 实现参考 [Firebase.swift](https://github.com/easemob/livecast/iOS/InteractivePodcast/Server/Firebase.swift)
 
-##### 注册Leancloud
+#### 注册Leancloud
 
 1. 前往 [Leancloud官网](https://www.leancloud.cn/) 注册项目，生成 appId、LeanCloudAppId、LeanCloudAppKey、LeanCloudServerUrl。
 - 替换 **Config.swift** 中 **AppId**、**LeanCloudAppId**、**LeanCloudAppKey**、**LeanCloudServerUrl**。
@@ -42,14 +42,14 @@ python ./LeanCloudHelp.py
 python3 ./LeanCloudHelp.py
 ```
 
-##### 注册Firebase
+### 注册Firebase
 前往 [Firebase官网](https://firebase.google.com/) 注册项目，生成文件 **GoogleService-Info.plist**，然后放到 InteractivePodcast 根目录下面。
 
-#### 运行示例项目
+### 运行示例项目
 1. 在iOS项目路径下，使用 "pod install" 命令去链接所有需要依赖的库。
 2. 最后使用 Xcode 打开 InteractivePodcast.xcworkspace，连接 iPhone／iPad 测试设备，设置有效的开发者签名后即可运行。
 
-#### 项目截图
+### 项目截图
 ![房间列表](https://img-blog.csdnimg.cn/748051bb9fcd483d87638afb4ed05b51.png#pic_center)
 
 ![房间详情](https://img-blog.csdnimg.cn/ca89686401c940418c20470f085155b5.png#pic_center)
