@@ -22,7 +22,7 @@
 - InteractivePodcast_LeanCloud, 数据源基于 Leancloud, 实现参考 [LeanCloud.swift](https://github.com/easemob/livecast/iOS/InteractivePodcast/Server/LeanCloud.swift)
 - InteractivePodcast_Firebase, 数据源基于 Firebase, 实现参考 [Firebase.swift](https://github.com/easemob/livecast/iOS/InteractivePodcast/Server/Firebase.swift)
 
-#### 注册Leancloud
+### 注册Leancloud
 
 1. 前往 [Leancloud官网](https://www.leancloud.cn/) 注册项目，生成 appId、LeanCloudAppId、LeanCloudAppKey、LeanCloudServerUrl。
 - 替换 **Config.swift** 中 **AppId**、**LeanCloudAppId**、**LeanCloudAppKey**、**LeanCloudServerUrl**。
