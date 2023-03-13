@@ -114,25 +114,26 @@ class RoomViewModel: NSObject {
     var danmus: BehaviorRelay<[Message]> = BehaviorRelay(value: [])
     
     func loadMessage() {
-        let conversation = EMClient.shared().chatManager.getConversation(room.chatGroupId, type: EMConversationTypeGroupChat, createIfNotExist: true)
+        let conversation = EMClient.shared().chatManager?.getConversation(room.chatGroupId, type: .groupChat, createIfNotExist: true)
         
-        conversation?.loadMessagesStart(fromId: "", count: 50, searchDirection: EMMessageSearchDirectionUp, completion: {[weak self] aMessages, eError in
+        conversation?.loadMessagesStart(fromId: "", count: 50, searchDirection: .up, completion: {[weak self] aMessages, eError in
             guard let self = self else { return }
             if eError != nil {
                 return
             }
             for message in aMessages! {
-                if let eMessage = message as? EMMessage {
+                if let eMessage = message as? EMChatMessage {
                     let msgBody = eMessage.body
                     if let textMessage = msgBody as? EMTextMessageBody {
                         var arr = self.messages.value
-                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext["name"] as? String ?? ""))
+                        let name: String = (eMessage.ext?["name"] ?? "") as! String
+                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: name))
                         self.messages.accept(arr)
                     }
-                    if eMessage.ext["type"] as! String == "danmu" {
+                    if eMessage.ext?["type"] as! String == "danmu" {
                         if let textMessage = msgBody as? EMTextMessageBody {
                             var arr = self.messages.value
-                            arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext["name"] as? String ?? ""))
+                            arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext?["name"] as? String ?? ""))
                             self.danmus.accept(arr)
                         }
                     }

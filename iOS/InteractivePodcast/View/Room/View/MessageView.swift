@@ -29,7 +29,7 @@ class MessageView: UIView {
         view.textView.returnKeyType = .send
         view.textView.font = UIFont.systemFont(ofSize: 14)
         view.textView.textColor = UIColor(hex: Colors.White)
-        view.placeholderAttributedText = NSAttributedString(string: "说点什么...",attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor(hex: Colors.White)])
+        view.placeholderLabel.attributedText = NSAttributedString(string: "说点什么...",attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor(hex: Colors.White)])
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -88,10 +88,10 @@ class MessageView: UIView {
         input.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 6).isActive = true
         input.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -6).isActive = true
         
-        input.delegates.didChangeHeight = { [weak self] height in
-            guard let self = self else { return }
-            self.heightConstraint.constant = height + 12
-        }
+//        input.delegates.didChangeHeight = { [weak self] height in
+//            guard let self = self else { return }
+//            self.heightConstraint.constant = height + 12
+//        }
         input.textView.delegate = self
     }
     

@@ -41,7 +41,7 @@ class RtcServer: NSObject {
         let config = AgoraRtcEngineConfig()
         config.appId = BuildConfig.AppId
         #if LEANCLOUD
-            config.areaCode = AgoraAreaCode.CN.rawValue
+        config.areaCode = .CN
         #endif
         #if FIREBASE
             config.areaCode = AgoraAreaCode.GLOB.rawValue
@@ -49,8 +49,8 @@ class RtcServer: NSObject {
         rtcEngine = AgoraRtcEngineKit.sharedEngine(with: config, delegate: self)
         if let engine = rtcEngine {
             engine.setChannelProfile(.liveBroadcasting)
-            engine.setAudioProfile(.musicHighQualityStereo, scenario: .chatRoomEntertainment)
-            engine.enableAudioVolumeIndication(500, smooth: 3, report_vad: false)
+            engine.setAudioProfile(.musicHighQualityStereo, scenario: .chatRoom)
+            engine.enableAudioVolumeIndication(500, smooth: 3, reportVad: false)
         }
     }
     
@@ -86,7 +86,7 @@ class RtcServer: NSObject {
             setClientRole(.audience, setting.audienceLatency)
         }
         muteLocalMicrophone(mute: member.isSelfMuted)
-        let code = rtc.joinChannel(byToken: BuildConfig.Token, channelId: channel, info: nil, uid: 0, options: AgoraRtcChannelMediaOptions())
+        let code = rtc.joinChannel(byToken: BuildConfig.Token, channelId: channel, info: nil, uid: 0)
         if (code != 0) {
             return Observable.just(Result(success: false, message: RtcServer.toErrorString(type: .join, code: code)))
         } else {
