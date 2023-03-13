@@ -285,7 +285,7 @@ class RoomController: BaseViewContoller, DialogDelegate, RoomDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         danmakuView.delegate = self
-        EMClient.shared().chatManager.add(self, delegateQueue: nil)
+        EMClient.shared().chatManager?.add(self, delegateQueue: nil)
         adapter.collectionView = listView
         adapter.dataSource = self
         listenerAdapter.collectionView = listenerView
@@ -455,17 +455,17 @@ extension RoomController: UITableViewDelegate,UITableViewDataSource {
 extension RoomController: EMChatManagerDelegate {
     func messagesDidReceive(_ aMessages: [Any]!) {
         for message in aMessages {
-            if let eMessage = message as? EMMessage {
+            if let eMessage = message as? EMChatMessage {
                 let msgBody = eMessage.body
                 if eMessage.to == viewModel.room.chatGroupId {
                     if let textMessage = msgBody as? EMTextMessageBody {
                         var arr = viewModel.messages.value
-                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext["name"] as? String ?? ""))
+                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext?["name"] as? String ?? ""))
                         viewModel.messages.accept(arr)
                     }
-                    if eMessage.ext["type"] as! String == "danmu" {
+                    if eMessage.ext?["type"] as! String == "danmu" {
                         if let textMessage = msgBody as? EMTextMessageBody {
-                            sendCommonDanmaku(text: "\( eMessage.ext["name"] as? String ?? ""): \(textMessage.text)")
+                            sendCommonDanmaku(text: "\( eMessage.ext?["name"] as? String ?? ""): \(textMessage.text)")
                         }
                     }
                 }
@@ -474,17 +474,17 @@ extension RoomController: EMChatManagerDelegate {
     }
     func cmdMessagesDidReceive(_ aCmdMessages: [Any]!) {
         for message in aCmdMessages {
-            if let eMessage = message as? EMMessage {
+            if let eMessage = message as? EMChatMessage {
                 let msgBody = eMessage.body
                 if eMessage.to == viewModel.room.chatGroupId {
                     if let textMessage = msgBody as? EMTextMessageBody {
                         var arr = viewModel.messages.value
-                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext["name"] as? String ?? ""))
+                        arr.append(Message(message: textMessage.text, from: eMessage.from, name: eMessage.ext?["name"] as? String ?? ""))
                         viewModel.messages.accept(arr)
                     }
-                    if eMessage.ext["type"] as! String == "danmu" {
+                    if eMessage.ext?["type"] as! String == "danmu" {
                         if let textMessage = msgBody as? EMTextMessageBody {
-                            sendCommonDanmaku(text: "\( eMessage.ext["name"] as? String ?? ""): \(textMessage.text)")
+                            sendCommonDanmaku(text: "\( eMessage.ext?["name"] as? String ?? ""): \(textMessage.text)")
                         }
                     }
                 }

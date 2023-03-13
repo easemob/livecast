@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FirebaseApp.configure()
         #endif
         let options = EMOptions(appkey: "easemob-demo#interactivepodcast")
-        options?.apnsCertName = nil
-        options?.enableConsoleLog = true
+        options.apnsCertName = nil
+        options.enableConsoleLog = true
         EMClient.shared().initializeSDK(with: options)
         return true
     }
